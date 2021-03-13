@@ -1,12 +1,12 @@
-# main links
+# main links 네비게이션 상위 우측 링크
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
+  # - title: ""
+  # url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "About"
+    url: https://sooonding.github.io/about
+  - title: "Tags"
+    url: https://sooonding.github.io/tags
+  - title: "Projects"
+    url: https://sooonding.github.io/projects
   # - title: "Sitemap"
   #   url: /sitemap/
