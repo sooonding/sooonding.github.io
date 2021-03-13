@@ -91,10 +91,10 @@ analytics:
     tracking_id:
     anonymize_ip: # true, false (default)
 
-# Site Author
+# Site Author 프로필 관련
 author:
   name: "sooonding"
-  avatar: "/assets/images/parrish-freeman-1cAMinWGc3s-unsplash.jpg"
+  avatar: "/assets/images/profile1.jpeg"
   bio: "going on make gradual improvements in realizing interactive performance🦾"
   location: "Amsa"
   email: 

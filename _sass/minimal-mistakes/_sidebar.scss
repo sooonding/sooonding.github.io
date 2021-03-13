@@ -128,8 +128,10 @@
 
   /* 프로필 이미지 스타일 */
   img {
-    max-width: 110px;
-    border-radius: 40%;
+    max-width: 160px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
 
     @include breakpoint($large) {
       padding: 5px;
