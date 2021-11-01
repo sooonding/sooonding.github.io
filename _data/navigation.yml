@@ -1,12 +1,12 @@
 # main links 네비게이션 상위 우측 링크
 main:
-  # - title: ""
-  # url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Home"
+  url: https://sooonding.github.io/
   - title: "About"
-    url: https://sooonding.github.io/about
+    url: /about/
   - title: "Tags"
-    url: https://sooonding.github.io/tags
+    url: /tags/
   - title: "Projects"
-    url: https://sooonding.github.io/projects
+    url: /projects/
   # - title: "Sitemap"
   #   url: /sitemap/

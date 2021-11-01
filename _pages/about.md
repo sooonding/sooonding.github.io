@@ -1,6 +1,6 @@
 ---  
 title: "About WONILLISM's Blog"
-permalink: /about/
+permalink: /about
 layout: single
 # header:
 #   overlay_image: /assets/Images/main-teaser.jpg
