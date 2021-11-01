@@ -4,9 +4,9 @@ main:
   # url: https://sooonding.github.io/
   - title: "About"
     url: /about/
+  - title: "Category"
+  url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "Projects"
-    url: /projects/
   # - title: "Sitemap"
   #   url: /sitemap/
