@@ -10,7 +10,7 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# config를 업데이트 시  터미널에서 bundle exec jekyll server 구동한다.
+# *config를 업데이트 시  터미널에서 bundle exec jekyll server 구동한다. ********************************************
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
@@ -21,7 +21,7 @@ locale: "en-US"
 title: "sooonding_blog"
 title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
-name: "Your Name"
+name: "jeon seong jin"
 description: "An amazing website."
 url: "https://sooonding.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "/"
@@ -99,7 +99,7 @@ author:
   avatar: "/assets/images/profile1.jpeg"
   bio: "going on make gradual improvements in realizing interactive performance🦾"
   location: "Amsa"
-  email: 
+  email:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
