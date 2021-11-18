@@ -9,15 +9,15 @@ title: "성장하는 프론트엔드 개발자 되기"
 excerpt:
 # 대괄호 안에 들어가는 카테고리 : 목차
 categories:
-  - "javaScript"
+  - "세미나"
 tags:
-  - [javaScript]
+  - [세미나]
 # toc는 우측 테이블
 toc: true
 # 우측 테이블 내용이 따라 오는것 
 toc_sticky: true
 # 우측 테이블 제목
-toc_label: "객체 계산된 프로퍼티명"
+toc_label: "성장하는 프론트엔드 개발자 되기"
 
 toc_icon: "cookie-bite"
 
@@ -27,7 +27,7 @@ date: 2021-11-17
 last_modified_at: 2021-11-17
 
 # post 공개 비공개
-published : false 
+# published : false 
 ---
 
 ### 뭘 공부할지 모르겠어요(우아한 테크코스 코치 장현석님)
