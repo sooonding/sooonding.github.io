@@ -1,6 +1,4 @@
 ---
-# layout
-layout : post
 
 # []는 카테고리 명 title을 적지 않으면 파일명이 올라간다.
 title: "성장하는 프론트엔드 개발자 되기"
@@ -22,9 +20,9 @@ toc_label: "성장하는 프론트엔드 개발자 되기"
 toc_icon: "cookie-bite"
 
 # 처음 작성날짜
-date: 2021-11-17
+date: 2021-11-18
 # 수정날짜
-last_modified_at: 2021-11-17
+last_modified_at: 2021-11-18
 
 # post 공개 비공개
 # published : false 
