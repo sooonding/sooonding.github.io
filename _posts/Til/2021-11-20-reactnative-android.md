@@ -22,7 +22,7 @@ date: 2021-11-20
 last_modified_at: 2021-11-20
 ---
 
-### 
+### ERROR : react-native :app:installDebug FAILED 메세지가 나오면서 실행 에러
 
 `ERROR : react-native :app:installDebug FAILED`
 
