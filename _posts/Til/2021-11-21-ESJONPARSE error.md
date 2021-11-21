@@ -33,3 +33,6 @@ npm start 시에 **`code EJSONPARSE` 에러를 마주하였습니다.**
 ### 결론
 
 해당 코드가 발생할 경우에는 `package.json`을 확인해 보자!
+
+참고
+[해결 참조링크 : velog(ryong9rrr님)](https://prod.velog.io/@ryong9rrr/npm-error-code-EJSONPARSE)
