@@ -40,11 +40,11 @@ Notes
 3. Output string must be two numbers separated by a single space, and highest number is first.
 
 
-### 문제 해설
+### 문제해설
 
 문맥을 보고 해당 반환값을 보자면 해당 문자열의 인자를 넘겨 줄 때 "가장 큰 숫자와 가장 작은 숫자"를 포함한 문자열로 반환하라는 문제로 보입니다. 문제를 푸는 솔루션 코드를 한번 봅시다.
 
-### 풀이
+### 해결방법
 
 메서드를 이용하여 푸는 방법과 일반 for문으로 푸는 두 가지 케이스로 풀어보았습니다.
 

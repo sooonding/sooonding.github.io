@@ -54,6 +54,8 @@ reCaptcha:
 atom_feed:
   path: # blank (default) uses feed.xml
   hide: # true, false (default)
+
+# 검색기능 추가 true할 경우 실행 기본은 false로 닫혀있다.
 search: # true, false (default)
 search_full_content: # true, false (default)
 search_provider: # lunr (default), algolia, google
@@ -88,7 +90,7 @@ social:
 
 # Analytics
 analytics:
-  provider: google-gtag # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider: "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id: "G-GRQCX27M0J"
     anonymize_ip: # true, false (default)
