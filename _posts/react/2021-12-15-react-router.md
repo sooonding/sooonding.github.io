@@ -207,7 +207,7 @@ export default Profile;
 
 Route에 해당 component를 추가하고 웹에서 보게되면 아래와 같은 그림으로 해당 값을 볼수가 있다.
 
-![스크린샷 2021-12-15 오전 10.48.24.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3af43818-7f6c-4a36-8073-dc8ee306f48c/스크린샷_2021-12-15_오전_10.48.24.png)
+![](https://images.velog.io/images/sooonding/post/02310ed7-d4f3-438e-9af4-04a5f7261596/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-15%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2010.48.24.png)
 
 하위 코드에 우리가 웹에서 본 `history`의 값을 `push`하여 넣게 되면 해당 path로 이동하게 된다. 하지만 해당 방법(`<Route/>안에 component를 넣는 방법`)에 대해서는 **공식 홈페이지에서는 추천하지 않는다**고 한다. 왜냐하면 재렌더의 문제가 발생할 수 있다고 한다.
 
@@ -215,7 +215,7 @@ Route에 해당 component를 추가하고 웹에서 보게되면 아래와 같�
 
 1번 케이스의 경우 `<Route>` 의 컴포넌트에 해당 컴포넌트를 "직접"넣어 불러와서 해당 컴포넌트의 props의 value를 받아올 수 있었다. 하지만 렌더의 문제점 때문에 쓰지 않기로 하여 자식 컴포넌트로 해당 컴포넌트를 내리게 되면 `props` 또한 접근할 수 없을것이다. 그럼 어떻게 해결할까?
 
-![아까와는 다르게 해당 props의 value값이 나타나지 않는다.](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/deb5c658-04ef-4dad-8c34-c4dc61a5d981/스크린샷_2021-12-15_오전_11.41.35.png)
+![아까와는 다르게 해당 props의 value값이 나타나지 않는다.](https://images.velog.io/images/sooonding/post/f2db0bd1-4e77-472a-80f0-985d9c4e4f92/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-15%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.41.35.png)
 
 아까와는 다르게 해당 props의 value값이 나타나지 않는다.
 
