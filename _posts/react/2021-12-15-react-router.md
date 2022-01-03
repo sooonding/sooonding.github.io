@@ -319,7 +319,147 @@ v6에서는 `element` 속성을 통해 컴포넌트를 바로 넣어줄 수 있�
 
 v6에서는 더 이상 `<Redirect>` 컴포넌트가 v6버전에서부터는 지원을 하지 않는다.
 
+### 실제 소스코드 추가
+
+#### App.jsx
+
+```jsx
+import './App.css';
+import { Switch, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Post from './pages/Post';
+import User from './pages/User/User';
+import Optional from './pages/Optional';
+import UserMain from './pages/User/UserMain';
+import About from './pages/User/About';
+
+function App() {
+  return (
+    <Routes>
+      {/*
+        Route에 Children이나 component 대신에, element 사용
+        Route는 "Routes"의 직속 자식이어야 함
+        exact는 더 이상 존재하지 않음!(v6에서는 디폴트로 생각)
+      */}
+      <Route path="/" element={<Home />} />
+      <Route path="/posts/:id" element={<Post />} />
+      <Route path="/users/:username/*" element={<User />}>
+        <Route path="" exact element={<UserMain />} />
+        <Route path="about" element={<About />} />
+      </Route>
+      {/* Optional URL 파라미터가 사라졌다.(아래와 같이 ?가 붙는)필요하면 Route를 2개 만들자. */}
+      {/* <Route path="/optional/:value?" element={<Optional />} /> */}
+      <Route path="/optional/:value" element={<Optional />} />
+      <Route path="/optional" element={<Optional />} />
+    </Routes>
+  );
+}
+export default App;
+```
+
+#### Post.jsx
+
+```jsx
+import { useHistory, useNavigate, useParams } from 'react-router-dom';
+
+function Post() {
+  const { id } = useParams();
+  /* 
+    useHistory =>  useNavigate로 변경
+      1. 기존 history.push = navigate('path')로 변경
+   */
+  const navigate = useNavigate();
+
+  return (
+    <div>
+      <button
+        onClick={() => {
+          navigate('/');
+        }}
+      >
+        Home
+      </button>
+      <button
+        onClick={() => {
+          // v5: history.goBack();
+          navigate(-1);
+        }}
+      >
+        Go Back
+      </button>
+      <button
+        onClick={() => {
+          // history.go(-2);
+          navigate(-2);
+        }}
+      >
+        Go Back Twice
+      </button>
+      <div>Post {id}</div>
+      <button onClick={() => navigate(`/posts/${parseInt(id) + 1}`)}>Next Post</button>
+    </div>
+  );
+}
+
+export default Post;
+```
+
+### Optional.jsx
+
+```jsx
+import { useParams } from 'react-router-dom';
+
+function Optional() {
+  const { value } = useParams();
+  return <div>Value: {value ?? 'None'}</div>;
+}
+
+export default Optional;
+```
+
+### pages 폴더의 User.jsx
+
+```jsx
+import { Outlet, Route, Routes, useParams, useRouteMatch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+function User() {
+  /* useRouterMatch도 사라짐 대신에 상대 경로를 쓸 수 있게 되었음
+    useRouterMatch를 쓴 이유가 match url나 match path를 읽어 "현재 경로애 *기반*하여 링크나 라우트를 설정하려고 사용했는데"
+    상대경로를 이용할수 있게 되었음.
+  */
+  // v5: const match = useRouteMatch();
+
+  const { username } = useParams();
+
+  return (
+    <div>
+      <div>
+        {/* v5: <Link to={`${match.url}`} style={{ marginRight: 16 }}> */}
+        <Link to="" style={{ marginRight: 16 }}>
+          @{username}
+        </Link>
+        {/* <Link to={`${match.url}/about`}>About</Link> */}
+        {/* 주의점은 /about을 하게되면 진짜 about 페이지로 가게 된다. */}
+        <Link to="about">About</Link>
+      </div>
+      {/* 서브 라우트를 구현하는 또 다른 방법은 Outlet이 있다. */}
+      {/* 아래처럼 해도 되지만 일단 다른 케이스를 알기 Outlet을 사용하기 위해서 일단 주석 */}
+      {/* <Routes>
+        <Route path="" exact element={<UserMain />}></Route>
+        <Route path="about" element={<About />}></Route>
+      </Routes> */}
+      {/* 사용하고 싶은 곳에 Outlet을 넣는다. */}
+      <Outlet />
+    </div>
+  );
+}
+
+export default User;
+```
+
 #### 참고
 
+[velopert님 youtube](https://www.youtube.com/watch?v=CHHXeHVK-8U&t=7s)
 [React-router 공홈](https://reactrouter.com/)
 [jaeme dev](https://www.jaeme.dev/react-router-v6/)
