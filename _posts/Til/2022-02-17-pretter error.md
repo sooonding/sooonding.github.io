@@ -1,8 +1,8 @@
 ---
 # []는 카테고리 명 title을 적지 않으면 파일명이 올라간다.
-title: "에러코드 Failed to load config "prettier/react" to extend from."
+title: '에러코드 Failed to load config prettier/react to extend from.'
 #excerpt는 description
-excerpt: "기존 prettier 셋팅한 상태에서 npm-start가 에러날 때"
+excerpt: '기존 prettier 셋팅한 상태에서 npm-start가 에러'
 # 대괄호 안에 들어가는 카테고리 : 목차
 categories:
   - 'error'
@@ -24,13 +24,9 @@ last_modified_at: 2022-02-17
 
 ### 발생
 
----
-
 - 기존에 `npm start` 를 했을 때 구동이 잘 되던 소스코드가 **Failed to load config "prettier/react"**란 에러 메시지를 남기며 동작하지 않는 문제가 발생.
 
 ### 해결
-
----
 
 구글링 검색 결과 나의 문제점과 가장 비슷한 상황을 보게 되었습니다.
 
