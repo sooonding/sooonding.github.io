@@ -17,7 +17,7 @@ toc_label: 'useCallback 사용시 반성합니다.'
 
 toc_icon: 'cookie-bite'
 # 처음 작성날짜
-date: 2024-02-24
+date: 2022-02-24
 # 수정날짜
 last_modified_at: 2022-02-24
 ---
