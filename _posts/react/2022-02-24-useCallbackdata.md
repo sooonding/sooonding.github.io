@@ -13,7 +13,7 @@ toc: true
 # 우측 테이블 내용이 따라 오는것
 toc_sticky: true
 # 우측 테이블 제목
-toc_label: 'useCallback 사용시 반성합니다.'
+toc_label: 'useCallback 사용시 반성'
 
 toc_icon: 'cookie-bite'
 # 처음 작성날짜
