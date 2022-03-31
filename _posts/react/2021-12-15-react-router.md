@@ -19,7 +19,7 @@ toc_icon: 'cookie-bite'
 # 처음 작성날짜
 date: 2021-12-15
 # 수정날짜
-last_modified_at: 2021-12-15
+last_modified_at: 2022-03-31
 ---
 
 ## Router? 그거 왜 쓰는건데?
@@ -318,6 +318,33 @@ v6에서는 `element` 속성을 통해 컴포넌트를 바로 넣어줄 수 있�
 ### 5. Redirect 컴포넌트 제거
 
 v6에서는 더 이상 `<Redirect>` 컴포넌트가 v6버전에서부터는 지원을 하지 않는다.
+
+### 6. Link의 변경
+
+v5와는 다르게 state속성을 따로 빼서 해당 값을 넣어준다.
+
+```javascript
+// 기존 v5
+<Link to={{ pathname: "/home", state: state }} />
+
+// v6의 변경된 코드
+<Link to="/home" state={state} />
+```
+
+타입에 대한 `interface`도 변경되었다. `v6`에서는 제네릭을 지원하지 않아 interface로 해당 타입을 지정할 때 `as`를 사용해준다.
+
+```javascript
+interface RouteParams {
+  helloId: string;
+}
+
+function Hello() {
+  //NOTE: 넘겨받은 state는 해당 코인의 값이 들어가있거고 그것을 접근하는것이 "useLocation"
+  const location = useLocation();
+  const name = location.state as RouteParams;
+  return <h1>{name}</h1>;
+}
+```
 
 ### 실제 소스코드 추가
 
