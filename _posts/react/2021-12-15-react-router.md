@@ -319,7 +319,43 @@ v6에서는 `element` 속성을 통해 컴포넌트를 바로 넣어줄 수 있�
 
 v6에서는 더 이상 `<Redirect>` 컴포넌트가 v6버전에서부터는 지원을 하지 않는다.
 
-### 6. Link의 변경
+### 6. Nested Router의 변화
+
+nested Router는 route안에 있는 또 다른 라우터를 말한다.
+
+- v6에서 구현하는 방법은 이전 버전과는 다르며 2가지의 타입을 가지고 있다.
+  1. 부모 route의 마지막에 `/*` 을 적어 해당 route의 내부에서 중첩 렌더가 되게 표시하고
+     자식 route를 부모 route element의 내부에 작성하는 방법
+  2. `Outlet` (중첩 라우트 사용)을 이용하는 방법으로 Outlet은 부모 경로 요소에서 자식 경로 요소를 렌더링하는데 사용해야 된다. 이를 통해 하위 경로가 렌더링 될 때 중첩된 ui 화면을 표시할 수 있다. 부모라우트가 정확히 일치하면 자식 라우트를 렌더링 하지만 다를 경우 렌더링이 이뤄지지 않음
+- 내 블로그 기재는 2번의 방식이 좀 더 직관적이라고 생각되어 outlet을 이용한 코드를 보여준다.
+
+```javascript
+// Router.tsx
+// 해당 부모 라우트에 자식라우트를 감싸주고,
+<Route path=":coinId" element={<Coin />}>
+  <Route path="chart" element={<Chart />} />
+  <Route path="price" element={<Price />} />
+</Route>
+// Coins.tsx
+// 부모에서 Outlet을 이용하여 중첩 표시를 해준다.
+<>
+  <OverviewItem>
+    <span>Max Supply:</span>
+    <span>{priceInfo?.max_supply}</span>
+  </OverviewItem>
+<Outlet />
+</>
+```
+
+### 7. useRouteMatch() => useMatch()로 변경
+
+`useRouteMatch()`가 사라지고 `useMatch(url주소)` 로 전환 “현재 위치를 기준으로 지정된 경로에 대한 일치 데이터를 반환합니다.” 덧붙이자면 `useMatch()`의 인자로 url을 넘기면 해당 url과 일치할 경우 url의 정보를 반환하고, 일치하지 않을 경우 `null`을 반환한다.
+
+```javascript
+const priceMatch = useMatch('/:coinId/price');
+```
+
+### 8. Link의 변경
 
 v5와는 다르게 state속성을 따로 빼서 해당 값을 넣어준다.
 
