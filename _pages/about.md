@@ -1,7 +1,7 @@
 ---
 title: '블로그 입니다.'
-permalink: /about/
+permalink: /resume/
 layout: single
 ---
 
-## sooonding.github.io 블로그
+## 안녕하세요 전성진입니다.
