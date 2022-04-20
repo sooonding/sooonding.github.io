@@ -2,8 +2,8 @@
 main:
   # - title: "Home"
   # url: https://sooonding.github.io/
-  - title: 'About'
-    url: /about/
+  - title: 'Resume'
+    url: /resume/
   - title: 'Category'
     url: /categories/
   - title: 'Tags'
