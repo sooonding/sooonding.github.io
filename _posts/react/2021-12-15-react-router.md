@@ -19,7 +19,7 @@ toc_icon: 'cookie-bite'
 # 처음 작성날짜
 date: 2021-12-15
 # 수정날짜
-last_modified_at: 2022-03-31
+last_modified_at: 2022-05-09
 ---
 
 ## Router? 그거 왜 쓰는건데?
@@ -519,6 +519,43 @@ function User() {
 }
 
 export default User;
+```
+
+### 9. Navigate 컴포넌트
+
+Navigate 컴포넌트는 컴포넌트를 화면에 보여주는 순간 다른 페이지로 이동을 하고 싶을 때 사용하는 컴포넌트입니다. 보통은 페이지를 "리다이렉트" 할 때 사용합니다. 로그아웃을 클릭하여 해당 화면에서 로그아웃된 초기 페이지로 가야할 때 사용됩니다.
+
+#### 예제
+
+Router.js
+
+```js
+<Routes>
+  <Route
+    path="/"
+    element={
+      <ProtectedRoute><SharedLayout /></ProtectedRoute>}>
+    <Route index element={<Stats />} />
+  </Route>
+<Routes>
+```
+
+Protected.js
+
+```js
+//NOTE children은 SharedLayout을 뜻한다.
+const ProtectedRoute = ({ children }) => {
+  const { user } = useSelector(store => store.user);
+  //NOTE user 데이터가 없으면 렌딩페이지로 리다이렉션
+  if (!user) {
+    return <Navigate to="/landing" />;
+  }
+
+  //NOTE: 해당 칠드런은 유저가 있으면 나오게 렌더
+  return children;
+};
+
+export default ProtectedRoute;
 ```
 
 #### 참고
