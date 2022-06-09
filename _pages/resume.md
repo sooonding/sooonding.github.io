@@ -46,9 +46,7 @@ GitHub.[**https://github.com/sooonding**](https://github.com/sooonding)
 
 **Frontend**
 
-2020.06 -
-
-2022. 04
+2020.06 - 2022.04
 
 - 코오롱 하늘채/커먼 라이프 Admin 웹 개발
 - 사내 공유 서비스인 파일 아카이브 웹 개발
@@ -60,9 +58,7 @@ GitHub.[**https://github.com/sooonding**](https://github.com/sooonding)
 
 **Frontend**
 
-2020.02 -
-
-2020.03
+2020.02 - 2020.03
 
 - 키오스크 서비스 중인 자판기를 React 및 Redux로 개발
 
@@ -76,9 +72,7 @@ GitHub.[**https://github.com/sooonding**](https://github.com/sooonding)
 
 **파일 아카이브**
 
-2021.04 -
-
-3차 업데이트 진행
+2021.04 - 3차 업데이트 진행
 
 - 사내 파일 업로드 및 공유가 가능한 웹 서비스 플랫폼을 개발하였습니다.
   - **React 기반의 ContextAPI**를 통한 전역 상태 관리 구현
@@ -87,9 +81,7 @@ GitHub.[**https://github.com/sooonding**](https://github.com/sooonding)
 
 **DigitalWork for SMS**
 
-2021.10 -
-
-2022.01
+2021.10 - 2022.01
 
 - 마켓팅 자동화 시스템인 허브스팟 내에 SMS 앱 배포 및 개발 담당하였습니다.
   - SENS api를 활용하여 sms 전송 기능 구현 (MMS, LMS, 예약 문자)
@@ -99,9 +91,7 @@ GitHub.[**https://github.com/sooonding**](https://github.com/sooonding)
 
 **[하이닉스 뉴스룸](https://www.hellodigital.kr/sk-hynix-newsroom/)**
 
-2021.08 -
-
-2021.10
+2021.08 - 2021.10
 
 - Hubspot 환경에서 하이닉스 뉴스룸 구축 및 개발하였습니다.
   - 화면 템플릿 코드 모듈화 및 기타 기능 개발
@@ -111,9 +101,7 @@ GitHub.[**https://github.com/sooonding**](https://github.com/sooonding)
 
 **코오롱 하늘채&커먼라이프 2.0**
 
-2020.06 -
-
-2022.01
+2020.06 - 2022.01
 
 - 커먼라이프/하늘채 입주민 관리를 위한 **어드민 개발** 담당하였습니다.
   - React와 CoreUi를 통한 어드민 개발 초기 설계와 고도화
