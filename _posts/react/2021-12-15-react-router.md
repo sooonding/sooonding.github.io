@@ -17,9 +17,9 @@ toc_label: 'React Router'
 
 toc_icon: 'cookie-bite'
 # 처음 작성날짜
-date: 2021-12-15
+date: 2022-06-12
 # 수정날짜
-last_modified_at: 2022-05-09
+last_modified_at: 2022-06-12
 ---
 
 ## Router? 그거 왜 쓰는건데?
@@ -369,6 +369,8 @@ v5와는 다르게 state속성을 따로 빼서 해당 값을 넣어준다.
 
 타입에 대한 `interface`도 변경되었다. `v6`에서는 제네릭을 지원하지 않아 interface로 해당 타입을 지정할 때 `as`를 사용해준다.
 
+`useLocation`은 현재 페이지의 pathName과 key를 알려준다.
+
 ```javascript
 interface RouteParams {
   helloId: string;
@@ -556,6 +558,31 @@ const ProtectedRoute = ({ children }) => {
 };
 
 export default ProtectedRoute;
+```
+
+### 10. 현재 URL의 queryString을 핸들링하는 URLSearchParams => `useSearchParams()`
+
+현재 url의 값에 대한 쿼리 키나 값을 가져올 때 v5에서는 URLSearchParams를 사용했지만 V6에서는 useSearchParams를 사용하여 좀 더 편하게 값을 가져오거나 핸들링 할 수 있게 되었다.
+
+```javascript
+  //검색된 keyword에 접근 useLocation은 현재 정보를 가져옴.(ex:pathName,key)
+  const location = useLocation();
+
+  /*
+  useSearchParams를 통해 쿼리 key의 값을 추출할 수 있음.
+  현재 URL의 query string을 읽고 수정하는데에 사용
+   */
+  const [searchParam, setSearchParam] = useSearchParams();
+
+  const v5keyword = new URLSearchParams(location.search).get('keyword');
+  const keyword = searchParam.get('keyword');
+  // 아래의 두 값은 동일한 값을 보여준다.
+  console.log(v5keyword, 'V5');
+  console.log(keyword,'V6);
+
+  // setSearchParam(location.search);
+  console.log(location, 'LOCATION');
+
 ```
 
 #### 참고
