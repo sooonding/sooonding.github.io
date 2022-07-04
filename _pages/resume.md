@@ -10,7 +10,7 @@ layout: single
 
 ### 📞 Contact.
 
-Email. **sooonding@google.com**
+Email. **sooonding@gmail.com**
 
 Phone. **010-8733-7142**
 
@@ -66,6 +66,8 @@ GitHub.[**https://github.com/sooonding**](https://github.com/sooonding)
 
 2021.04 - 3차 업데이트 진행
 
+![kolonFileAchieve](https://velog.velcdn.com/images/sooonding/post/7083eb08-54ac-4f91-8b07-aeed58113686/image.gif)
+
 - 사내 파일 업로드 및 공유가 가능한 웹 서비스 플랫폼을 개발하였습니다.
   - **React 기반의 ContextAPI**를 통한 전역 상태 관리 구현
   - 사용자의 편의성을 위해 **Fabric.js**를 이용한 PDF 상에 메모 서비스 구현
@@ -94,6 +96,8 @@ GitHub.[**https://github.com/sooonding**](https://github.com/sooonding)
 **코오롱 하늘채&커먼라이프 2.0**
 
 2020.06 - 2022.01
+
+![commonLife](https://velog.velcdn.com/images/sooonding/post/42162057-a9c3-4c1e-b7b0-b08c0b80ae35/image.gif)
 
 - 커먼라이프/하늘채 입주민 관리를 위한 **어드민 개발** 담당하였습니다.
   - React와 CoreUi를 통한 어드민 개발 초기 설계와 고도화
