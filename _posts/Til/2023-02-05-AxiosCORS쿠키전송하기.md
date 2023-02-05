@@ -17,9 +17,9 @@ toc_label: 'Axios CORS 쿠키 전송하기'
 
 toc_icon: 'cookie-bite'
 # 처음 작성날짜
-date: 2022-02-05
+date: 2023-02-05
 # 수정날짜
-last_modified_at: 2022-02-05
+last_modified_at: 2023-02-05
 ---
 
 ## CORS 허용해도 에러가 나는 현상
