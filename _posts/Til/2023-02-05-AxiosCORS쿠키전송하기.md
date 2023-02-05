@@ -24,38 +24,30 @@ last_modified_at: 2023-02-05
 
 ## CORS 허용해도 에러가 나는 현상
 
----
+<br>
+웹 구성시 리액트,뷰,앵귤러 같은 라이브러리|| 프레임워크를 사용하면 프론트 서버를 “따로” 개발하여 사용하게 된다.<br>
 
-웹 구성시 리액트,뷰,앵귤러 같은 라이브러리|| 프레임워크를 사용하면 프론트 서버를 “따로” 개발하여 사용하게 된다.
+만일 클라이언트 서버가 [localhost](http://localhost):3000이고 API서버가 [localhost:4000](http://localhost:4000)면 “서로 같은 host만 사용하지 port번호”는 다른 입장이다. 그렇기에 cors 에러를 마주하게 된다.
+<br>
 
-만일 클라이언트 서버가 [localhost](http://localhost):3000이고 API서버가 [localhost:4000](http://localhost:4000)면 “서로 같은 host만 사용하지 port번호”는 다른 입장이다. 그렇기에 cors 에러를 마주하게 된다. 그래서 지책으로 `Access-Control-Allow-origin` 과 같이 헤더에 값을 모두 허용한다고 해도 에러를 마주하게 되는 경우가 있는데 어떻게 해결할까?
-
-</br>
+그래서 지책으로 `Access-Control-Allow-origin` 과 같이 헤더에 값을 모두 허용한다고 해도 에러를 마주하게 되는 경우가 있는데 어떻게 해결할까?
 
 ## withCredentials 옵션으로 쿠키 보내기
 
----
-
 `withCredentials` 옵션은 단어 그대로 “다른 도메인”에 요청을 보낼 때 요청에 인증정보(credential)를 담아서 보낼 지를 결정하는 항목
 
-쿠키나 인증 헤더 정보를 포함시켜 요청하고 싶다면, 클라이언트에서 API 요청 메소드를 보낼 때 `withCredentials` 옵션을 “true”로 설정하면 된다. 또한 인증된 요청을 정상적으로 수행하려면 클라이언트 뿐만 아니라 서버에서도 `Access-Control-Allow-Credentials` 을 true로 인증 옵션을 설정해주어야 한다.
+쿠키나 인증 헤더 정보를 포함시켜 요청하고 싶다면, 클라이언트에서 API 요청 메소드를 보낼 때 `withCredentials` 옵션을 “true”로 설정하면 된다.
 
-<br/>
+또한 인증된 요청을 정상적으로 수행하려면 클라이언트 뿐만 아니라 서버에서도 `Access-Control-Allow-Credentials` 을 true로 인증 옵션을 설정해주어야 한다.
 
 ## 정리
-
----
 
 - **클라이언트와 서버 둘 다 Credentials부분을 true로 설정**
   1. 표준 CORS요청은 기본적으로 쿠키를 설정하거나 보낼 수 없다.
   2. 프론트 axios요청 할 때, `withCredentials` 부분을 true 로 수동으로 설정하여 CORS 요청값에 쿠키값을 넣어준다.
   3. 마찬가지로 서버도 응답헤더에 `Access-Control-Allow-Credentials` 를 true로 설정해준다.
 
-<br/>
-
 ## 예제 - node
-
----
 
 - 클라이언트 로그인 시
     <figure>
